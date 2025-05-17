@@ -15,10 +15,6 @@ def find(chosenId,chosenFill):
     search_box.press("Enter")
     random_sleep(2, 4)
 
-def findAndButton(chosenId):
-    singUp = page.locator(chosenId)
-    singUp.click()    
-    random_sleep()
 
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=False, slow_mo=random.randint(50, 150))      
