@@ -43,7 +43,7 @@ with sync_playwright() as p:
     page.select_option("select#pizza-size", "small")
     random_sleep()
 
-    page.get_by_label('cheese').check()
+    page.locator("input[type='checkbox'][value='cheese']").check()
     random_sleep()
 
     page.locator("input[type='radio'][value='credit']").check()
